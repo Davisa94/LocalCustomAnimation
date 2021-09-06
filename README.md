@@ -21,7 +21,9 @@ Hide the source and go to Streamer.bot.
 
 Within Streamer.bot Create 2 Actions:
 
-1. a new action that changes the contents of test.js to the latest event text and then call action 2
+1. a new action that changes the contents of test.js  using the format:
+   *var latest = "Text goes here";*
+   to the latest event text and then call action 2
 2. and then create another action which
 
 * Shows the source you just made
