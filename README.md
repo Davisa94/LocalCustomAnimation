@@ -3,7 +3,10 @@
 A file for loading a custom animation
 
 Usage:
-Place the wrapper.html and the test.js in the same folder along with your animation. Rename the animation as alert_animation.* where * is the file extension.
+Place the wrapper.html and the test.js in the same folder along with your animation and optional sound file. Rename the animation as alert_animation and the sound file as alert_sound.
+
+Within the HTML file "wrapper.html" Ensure that you change the filetype for your video and audio as follows:
+
 
 Within OBS or Streamlabs create a new browser source and select the box that says Local File:
 ![](image/README/1630882127918.png)
@@ -17,7 +20,21 @@ Then ensure that the two checkboxes are checked:
 
 ![](image/README/1630882337567.png)
 
-Hide the source and go to Streamer.bot.
+Next, to be able to hear the alert go off if there is a sound:
+
+* Ensure that the "Control audio via OBS" checkbox is checked within the source properties as well
+* ![](image/README/1630900845829.png)
+* Go into the Sources advanced audio properties:
+* ![](image/README/1630900954396.png)
+* Ensure that the dropdown on the far right reads: "Monitor and Output"
+* ![](image/README/1630901004801.png)
+* If you dont see it in the list ensure the source is visible first and try again.
+
+Now when the alert goes off you should be able to hear it
+
+Test it out by hiding and showing the source.
+
+Now hide the source and go to Streamer.bot.
 
 Within Streamer.bot Create 2 Actions:
 
