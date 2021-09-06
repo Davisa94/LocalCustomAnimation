@@ -3,6 +3,7 @@
 A file for loading a custom animation
 
 Usage:
+# File Setup
 Place the wrapper.html and the test.js in the same folder along with your animation and optional sound file. Rename the animation as alert_animation and the sound file as alert_sound.
 
 Within the HTML file "wrapper.html" Ensure that you change the filetype for your video and audio as follows:
@@ -16,6 +17,8 @@ and if your audio is mp3 instead of m4a change these lines:
 `        <!-- EDIT ONLY BELOW IF AUDIO IS NOT m4a --> <source src="alert_sound.m4a" type="audio/mpeg"> <!-- ONLY EDIT ABOVE -->`
 to look like this:
 `        <!-- EDIT ONLY BELOW IF AUDIO IS NOT m4a --> <source src="alert_sound.mp3" type="audio/mpeg"> <!-- ONLY EDIT ABOVE -->`
+
+# Streaming Software Setup
 
 Within OBS or Streamlabs create a new browser source and select the box that says Local File:
 ![](image/README/1630882127918.png)
@@ -44,6 +47,8 @@ Now when the alert goes off you should be able to hear it
 Test it out by hiding and showing the source.
 
 Now hide the source and go to Streamer.bot.
+
+# Streamer.Bot Setup
 
 Within Streamer.bot Create 2 Actions:
 
