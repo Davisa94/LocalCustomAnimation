@@ -8,7 +8,22 @@ Place the wrapper.html and the test.js in the same folder along with your animat
 Within the HTML file "wrapper.html" Ensure that you change the filetype for your video and audio as follows:
 
 If your video is MP4 instead of webm change these lines:
+`        <!-- EDIT ONLY BELOW IF THE ANIMATION IS NOT A WEBM -->
+        <source src="alert_animation.webm" type="video/webm">
+        <!-- ONLY EDIT ABOVE -->`
+To look like :
+`        <!-- EDIT ONLY BELOW IF THE ANIMATION IS NOT A WEBM -->
+        <source src="alert_animation.mp4" type="video/mpeg">
+        <!-- ONLY EDIT ABOVE -->`
 
+and if your audio is mp3 instead of m4a change these lines:
+`        <!-- EDIT ONLY BELOW IF AUDIO IS NOT m4a -->
+        <source src="alert_sound.m4a" type="audio/mpeg">
+        <!-- ONLY EDIT ABOVE -->`
+to look like this:
+`        <!-- EDIT ONLY BELOW IF AUDIO IS NOT m4a -->
+        <source src="alert_sound.mp3" type="audio/mpeg">
+        <!-- ONLY EDIT ABOVE -->`
 
 Within OBS or Streamlabs create a new browser source and select the box that says Local File:
 ![](image/README/1630882127918.png)
