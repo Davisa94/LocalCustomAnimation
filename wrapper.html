@@ -5,11 +5,11 @@
     <title>Document</title>
     <style>
         body {
-            background-color: gainsboro
+            background-color: none;
         }
         .video {
-            color: red;
-            background-color: yellow;
+            color: none;
+            background-color: none;
             width: 50rem;
             height: 25rem;
             grid-area: overlap;
@@ -19,7 +19,7 @@
 
         .text-notification {
             color: rgb(255, 255, 255);
-            background-color: rgba(255, 0, 0, 0.411);
+            background-color: none;
             font-size: 65px;
             width: 44.5rem;
             height: 10rem;
@@ -101,11 +101,14 @@
             textDiv.innerHTML = latest;
         }
     </script>
+    <script src="settings.js"></script>
 </head>
 
 <body onload="changeInnerText()">
     <video class="video" autoplay>
+        <!-- EDIT ONLY BELOW IF THE ANIMATION IS NOT A WEBM -->
         <source src="alert_animation.webm" type="video/webm">
+        <!-- ONLY EDIT ABOVE -->
         Your browser does not support this video
     </video>
     <div class='text-notification fade-in' id="text">
@@ -113,11 +116,12 @@
         https://github.com/Davisa94/LocalCustomAnimation
     </div>
     <audio class="audio" autoplay>
-        <source src="alert_sound" type="audio/mpeg">
+        <!-- EDIT ONLY BELOW IF AUDIO IS NOT m4a -->
+        <source src="alert_sound.m4a" type="audio/mpeg">
+        <!-- ONLY EDIT ABOVE -->
         Your browser does not support the audio tag.
     </audio>
     <script src="test.js"></script>
-
 
 
 </body>
