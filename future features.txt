@@ -1,0 +1,2 @@
+Separate settings.js file that allows the user to change filenames and types
+Will require a separate JS file to inject the HTML elements for the video and the audio.
