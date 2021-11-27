@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+
+    <title>Document</title>
+    <style>
+        body {
+            background-color: gainsboro
+        }
+        /* .container {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            grid-template-areas: "overlap";
+        } */
+        .video {
+            color: red;
+            background-color: yellow;
+            width: 50rem;
+            height: 25rem;
+            grid-area: overlap;
+            position: absolute;
+
+        }
+        .text-notification {
+            color: rgb(255, 255, 255);
+            background-color: rgba(255, 0, 0, 0.411);
+            font-size: 65px;
+            width: 44.5rem;
+            height: 10rem;
+            top: 90px;
+            left: 53px;
+            position: relative;
+            text-align: center;
+            z-index: 1;
+            position: absolute;
+        }
+        .fade-in{
+            opacity: 0;
+            animation-delay: 2.5s;
+            animation: fadeIn ease 8s;
+            -webkit-animation: fadeIn ease 8s;
+            -webkit-animation-delay: 2.5s;
+            -moz-animation: fadeIn ease 8s;
+            -moz-animation-delay: 2.5s;
+            -o-animation: fadeIn ease 8s;
+            -o-animation-delay: 2.5s;
+            -ms-animation: fadeIn ease 8s;
+            -ms-animation-delay: 2.5s;
+        }
+        @keyframes fadeIn {
+            0% {
+                opacity:0;
+            }
+            75% {
+                opacity:1;
+            }
+        }
+
+        @-moz-keyframes fadeIn {
+            0% {
+                opacity:0;
+            }
+            100% {
+                opacity:1;
+            }
+        }
+
+        @-webkit-keyframes fadeIn {
+            0% {
+                opacity:0;
+            }
+            100% {
+                opacity:1;
+            }
+        }
+
+        @-o-keyframes fadeIn {
+            0% {
+                opacity:0;
+            }
+            100% {
+                opacity:1;
+            }
+        }
+
+        @-ms-keyframes fadeIn {
+            0% {
+                opacity:0;
+            }
+            100% {
+                opacity:1;
+            }
+        }
+
+
+
+    </style>
+            <script>
+            function changeInnerText() {
+                textDiv = document.getElementById("text");
+                textDiv.innerHTML = latest;
+            }
+        </script>
+</head>
+<body onload="changeInnerText()">
+    <video class="video" autoplay>
+        <source src="full_screen_alerts_VP9.webm" type="video/webm">
+        Your browser does not support this video
+    </video>
+    <div class='text-notification fade-in' id="text">
+        Text go here
+    </div>
+    <script src="test.js"></script>
+
+    
+
+</body>
+</html>

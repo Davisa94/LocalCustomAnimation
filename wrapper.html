@@ -4,12 +4,44 @@
 <head>
     <title>Document</title>
     <style>
+
+        .topText {
+            background-color: rgba(69, 69, 69, 0.32);
+            font-size: 65px;
+            width: 44.5rem;
+            height: 10rem;
+            top: 8px;
+            left: 53px;
+            position: relative;
+            text-align: center;
+            z-index: 2;
+            position: absolute;
+            visibility: hidden;
+        }
+        .bottomText {
+            background-color: none;
+            align-items: bottom;
+            font-size: 65px;
+            width: 44.5rem;
+            height: 10rem;
+            /* top: 248px; */
+            bottom: 228px;
+            left: 53px;
+            position: relative;
+            text-align: center;
+            z-index: 2;
+            position: absolute;
+            /* visibility: hidden; */
+        }
+        .bottomText > p {
+            background-color: rgba(69, 69, 69, 0.32);
+        }
         body {
             background-color: none;
         }
         .video {
             color: none;
-            background-color: none;
+            background-color: red;
             width: 50rem;
             height: 25rem;
             grid-area: overlap;
@@ -19,7 +51,7 @@
 
         .text-notification {
             color: rgb(255, 255, 255);
-            background-color: none;
+            background-color: black;
             font-size: 65px;
             width: 44.5rem;
             height: 10rem;
@@ -29,6 +61,7 @@
             text-align: center;
             z-index: 1;
             position: absolute;
+            visibility: hidden;
         }
 
         .fade-in {
@@ -100,27 +133,73 @@
             textDiv = document.getElementById("text");
             textDiv.innerHTML = latest;
         }
+
+        function loadText() {
+            var topTextFrame = document.getElementById("topText1");
+            var bottomTextFrame = document.getElementById("bottomText1");
+            var pTag = document.createElement("p");
+            var innerText = document.createTextNode(bottomText);
+            pTag.appendChild(innerText);
+            topTextFrame.innerHTML = topText;
+            bottomTextFrame.append(pTag);
+        }
+        function loadVideo() {
+            var video = document.getElementById("vidFrame");
+            var vidsrc = document.getElementById("videoSrc")
+            date = new Date();
+
+            vidsrc.src = media;
+            video.load();
+            video.play();
+        }
+
+        function loadImage() {
+            var video = document.getElementById("vidFrame");
+            video.poster = memeImage;
+
+        }
+
+        function loadMedia() {
+            // check if the 
+            if (memeImage != "") {
+                loadImage();
+            }
+            if (media != ""){
+                loadVideo();
+            }
+            if(topText != "" || bottomText != "" )
+            {
+                loadText();
+            }
+
+        }
     </script>
     <script src="settings.js"></script>
 </head>
 
-<body onload="changeInnerText()">
-    <video class="video" autoplay>
+<body onload="loadMedia();" onclick="loadVideo();">
+    <div class="topText" id="topText1"></div>
+    <video class="video" id="vidFrame" autoplay poster="">
         <!-- EDIT ONLY BELOW IF THE ANIMATION IS NOT A WEBM -->
-        <source src="alert_animation.webm" type="video/webm">
+        <source src="" id="videoSrc">
         <!-- ONLY EDIT ABOVE -->
         Your browser does not support this video
     </video>
+    <img id="image">
+        <source>
+    </img>
     <div class='text-notification fade-in' id="text">
         For more help on setup visit the github page: 
         https://github.com/Davisa94/LocalCustomAnimation
     </div>
-    <audio class="audio" autoplay>
-        <!-- EDIT ONLY BELOW IF AUDIO IS NOT m4a -->
+
+    <div class="bottomText" id=bottomText1></div>
+    <!-- <audio class="audio" autoplay>
+        EDIT ONLY BELOW IF AUDIO IS NOT m4a
         <source src="alert_sound.m4a" type="audio/mpeg">
-        <!-- ONLY EDIT ABOVE -->
+        ONLY EDIT ABOVE
         Your browser does not support the audio tag.
-    </audio>
+    </audio> -->
     <script src="test.js"></script>
 
 
