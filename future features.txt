@@ -3,3 +3,16 @@ Will require a separate JS file to inject the HTML elements for the video and th
 chatter can provide external image/video/gif link to use instead of the provided ones
 must be approved by moderator before display on screen, can specify moderator approve or multiple moderator, or moderator and streamer
 Add domain whitelist and blacklist capability
+
+This project acts as a module for streamers to set as a local browser source.
+This facilitates sharing Audio/Video/Pictures wihtout creating a new source for each one.
+I.E a playsound command needing a new source for each sound.
+
+!doot
+!yeet
+!commandname medianame 
+
+
+redeem a sound:
+[  doot ]
+!playsound doot
