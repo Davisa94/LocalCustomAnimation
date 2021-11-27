@@ -1,2 +1,5 @@
 Separate settings.js file that allows the user to change filenames and types
 Will require a separate JS file to inject the HTML elements for the video and the audio.
+chatter can provide external image/video/gif link to use instead of the provided ones
+must be approved by moderator before display on screen, can specify moderator approve or multiple moderator, or moderator and streamer
+Add domain whitelist and blacklist capability
